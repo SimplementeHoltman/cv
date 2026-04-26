@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Holtman - Desarrollador Full-Stack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Luis Holtman | Desarrollador Full-Stack</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,16 +14,18 @@
             <div class="logo">
                 <span class="logo-bracket">&lt;</span>LH<span class="logo-bracket">/&gt;</span>
             </div>
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#aptitudes">Aptitudes</a></li>
+                <li><a href="#recomendaciones">Recomendaciones</a></li>
                 <li><a href="#contacto" class="btn-nav">Contacto</a></li>
             </ul>
         </div>
@@ -32,6 +34,14 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Luis Holtman</h1>
+                <p class="hero-subtitle">Desarrollador Full-Stack & Estudiante de Ingeniería en Sistemas</p>
+                <div class="hero-cta">
+                    <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactar</a>
+                </div>
+            </div>
             <div class="code-snippet">
                 <span class="code-comment">// Bienvenido a mi portafolio</span>
                 <span class="code-keyword">const</span> developer = {<br>
@@ -41,16 +51,6 @@
                 <span class="indent">status: <span class="code-keyword">true</span></span><br>
                 };
             </div>
-            <h1 class="hero-title">Desarrollo con Propósito</h1>
-            <p class="hero-subtitle">Transformo ideas en código elegante y funcional</p>
-            <div class="hero-cta">
-                <a href="#proyectos" class="btn-primary">Ver Mis Proyectos</a>
-                <a href="#contacto" class="btn-secondary">Ponte en Contacto</a>
-            </div>
-        </div>
-        <div class="hero-decoration">
-            <div class="decoration-circle"></div>
-            <div class="decoration-line"></div>
         </div>
     </section>
 
@@ -60,35 +60,39 @@
             <div class="section-header">
                 <h2>Sobre Mí</h2>
                 <div class="header-underline"></div>
+                <p class="section-subtitle">Conoce más sobre mi trayectoria y pasión por la tecnología</p>
             </div>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="foto.png" alt="Luis Holtman" class="profile-pic" id="fotoPerfil">
+                </div>
                 <div class="about-text">
                     <h3>Estudiante de Ingeniería en Sistemas</h3>
-                    <p>Soy un desarrollador apasionado por crear soluciones web innovadoras y de alta calidad. Actualmente estudiando Ingeniería en Sistemas (VI semestre) en la Universidad Mesoamericana, combinando mi formación académica con experiencia práctica en desarrollo full-stack.</p>
-                    <p>Me especializo en construir aplicaciones escalables con <strong>Node.js, Laravel, Angular</strong> y bases de datos modernas. Mi enfoque es escribir código limpio, mantenible y que resuelva problemas reales.</p>
-                    <p>Tengo una sólida base en <strong>metodologías ágiles</strong> (Scrum, Kanban, XP) y paso mi tiempo libre mejorando mis habilidades en arquitectura de software, APIs REST y DevOps.</p>
+                    <p>Soy un desarrollador apasionado por crear soluciones web innovadoras. Combino mi formación académica en la <strong>Universidad Mesoamericana</strong> con experiencia práctica en desarrollo full-stack y automatización de procesos.</p>
+                    <p>Me especializo en aplicaciones escalables con <strong>Node.js, Laravel, Angular</strong> y bases de datos relacionales. Aplico metodologías ágiles (Scrum, Kanban) y control de versiones con Git. También manejo herramientas de datos como KNIME, Databricks y Python para análisis.</p>
+                    <p>Mi trabajo simultáneo me ha dado disciplina, responsabilidad y una excelente gestión del tiempo.</p>
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-code"></i>
-                        <h4>Full-Stack</h4>
-                        <p>Backend & Frontend</p>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-database"></i>
-                        <h4>Bases de Datos</h4>
-                        <p>SQL & NoSQL</p>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-users"></i>
-                        <h4>Trabajo en Equipo</h4>
-                        <p>Metodologías Ágiles</p>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-rocket"></i>
-                        <h4>DevOps</h4>
-                        <p>Docker & Git</p>
-                    </div>
+            </div>
+            <div class="about-highlights">
+                <div class="highlight-item">
+                    <i class="fas fa-code"></i>
+                    <h4>Full-Stack</h4>
+                    <p>Angular, Laravel, Node.js</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-database"></i>
+                    <h4>Bases de Datos</h4>
+                    <p>PostgreSQL, MySQL, Oracle</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Datos & BI</h4>
+                    <p>Python, KNIME, Databricks</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Seguridad</h4>
+                    <p>Buenas prácticas informáticas</p>
                 </div>
             </div>
         </div>
@@ -100,76 +104,10 @@
             <div class="section-header">
                 <h2>Proyectos Destacados</h2>
                 <div class="header-underline"></div>
+                <p class="section-subtitle">Trabajos recientes que reflejan mis habilidades</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3>API RESTful de Red Social</h3>
-                    </div>
-                    <div class="project-meta">
-                        <span class="year">2025</span>
-                        <span class="role">Backend Developer</span>
-                    </div>
-                    <p class="project-description">API completa con Node.js + Express y PostgreSQL. Incluye autenticación de usuarios, sistema de mensajes con timestamp, follow/unfollow, búsqueda avanzada y documentación con OpenAPI.</p>
-                    <div class="project-tech">
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>PostgreSQL</span>
-                        <span>API REST</span>
-                    </div>
-                    <a href="https://github.com/SimplementeHoltman/Practica-1_LuisHoltman" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Ver en GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-box"></i>
-                        </div>
-                        <h3>App Seguimiento de Paquetes</h3>
-                    </div>
-                    <div class="project-meta">
-                        <span class="year">2025</span>
-                        <span class="role">Frontend Developer</span>
-                    </div>
-                    <p class="project-description">Aplicación responsive con AngularJS para registrar y dar seguimiento a paquetes. Tres módulos: creación de órdenes con validaciones, actualización de estado con comentarios e historial detallado.</p>
-                    <div class="project-tech">
-                        <span>AngularJS</span>
-                        <span>Bootstrap</span>
-                        <span>UX/UI</span>
-                        <span>Responsive</span>
-                    </div>
-                    <a href="https://github.com/SimplementeHoltman/practica-dos" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Ver en GitHub
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-pizza-slice"></i>
-                        </div>
-                        <h3>Aplicación de Pizzería</h3>
-                    </div>
-                    <div class="project-meta">
-                        <span class="year">2024</span>
-                        <span class="role">Full-Stack Developer</span>
-                    </div>
-                    <p class="project-description">App completa con Laravel (MVC), UI con Bootstrap, catálogo de productos, carrito de compras e integración con API de Google Maps para ubicar sucursales.</p>
-                    <div class="project-tech">
-                        <span>Laravel</span>
-                        <span>MVC</span>
-                        <span>Google Maps</span>
-                        <span>Bootstrap</span>
-                    </div>
-                    <a href="https://github.com/SimplementeHoltman/pizzeria" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Ver en GitHub
-                    </a>
-                </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Los proyectos se cargarán dinámicamente con JS -->
             </div>
         </div>
     </section>
@@ -181,17 +119,17 @@
                 <h2>Experiencia & Formación</h2>
                 <div class="header-underline"></div>
             </div>
-            
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content work">
                         <div class="timeline-header">
                             <h3>Asesor de Salud</h3>
-                            <span class="timeline-date">abr. 2022 - Actualidad</span>
+                            <span class="timeline-date" id="experiencia-fecha">abr. 2022 - Actualidad</span>
                         </div>
                         <p class="timeline-company">Blue Medical Guatemala</p>
-                        <p class="timeline-description">Atención al cliente en salud, gestión de casos entre aseguradoras y pacientes. Automatización de procesos internos con programación, cumplimiento de KPIs y mejora de eficiencia operativa.</p>
+                        <p class="timeline-description">Atención al cliente en sector salud, gestión de casos entre aseguradoras y pacientes. Automatización de procesos con programación, cumplimiento de KPIs y mejora de eficiencia operativa.</p>
+                        <p class="timeline-duration" id="experiencia-duracion"></p>
                     </div>
                 </div>
 
@@ -200,69 +138,70 @@
                     <div class="timeline-content education">
                         <div class="timeline-header">
                             <h3>Ingeniería en Sistemas</h3>
-                            <span class="timeline-date">Ene. 2023 - Vi Semestre (En Curso)</span>
+                            <span class="timeline-date" id="educacion-fecha">ene. 2023 - En curso</span>
                         </div>
                         <p class="timeline-company">Universidad Mesoamericana</p>
-                        <p class="timeline-description">Base en metodologías ágiles, pensamiento computacional y tecnologías web modernas. Especialización en APIs REST, bases de datos, control de versiones y contenedores.</p>
+                        <p class="timeline-description">Formación en metodologías ágiles, arquitectura de software, APIs REST, bases de datos, control de versiones y contenedores.</p>
+                        <p class="timeline-duration" id="educacion-duracion"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Tecnologías -->
-    <section id="tecnologias" class="technologies">
+    <!-- Sección Aptitudes -->
+    <section id="aptitudes" class="aptitudes">
         <div class="container">
             <div class="section-header">
-                <h2>Tecnologías & Habilidades</h2>
+                <h2>Aptitudes</h2>
                 <div class="header-underline"></div>
+                <p class="section-subtitle">Habilidades blandas que aporto a cada proyecto</p>
             </div>
-
-            <div class="tech-categories">
-                <div class="tech-category">
-                    <h3><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="tech-list">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Angular</span>
-                        <span class="tech-tag">AngularJS</span>
-                        <span class="tech-tag">Responsive Design</span>
-                    </div>
+            <div class="aptitudes-grid">
+                <div class="aptitud-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Gestión del Tiempo</h4>
+                    <p>Capacidad para equilibrar estudios, trabajo y proyectos personales eficientemente.</p>
                 </div>
-
-                <div class="tech-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="tech-list">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">Laravel</span>
-                        <span class="tech-tag">APIs REST</span>
-                        <span class="tech-tag">MVC</span>
-                        <span class="tech-tag">Scrum</span>
-                    </div>
+                <div class="aptitud-card">
+                    <i class="fas fa-tasks"></i>
+                    <h4>Disciplina</h4>
+                    <p>Constancia y compromiso para alcanzar metas profesionales y académicas.</p>
                 </div>
-
-                <div class="tech-category">
-                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
-                    <div class="tech-list">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Oracle</span>
-                        <span class="tech-tag">MariaDB</span>
-                    </div>
+                <div class="aptitud-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Resolución de Problemas</h4>
+                    <p>Enfoque analítico para identificar y solucionar desafíos técnicos.</p>
                 </div>
-
-                <div class="tech-category">
-                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
-                    <div class="tech-list">
-                        <span class="tech-tag">Git / GitHub</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">Kanban</span>
-                        <span class="tech-tag">XP</span>
-                    </div>
+                <div class="aptitud-card">
+                    <i class="fas fa-users"></i>
+                    <h4>Trabajo en Equipo</h4>
+                    <p>Colaboración efectiva en entornos ágiles y multidisciplinarios.</p>
                 </div>
+                <div class="aptitud-card">
+                    <i class="fas fa-comments"></i>
+                    <h4>Comunicación</h4>
+                    <p>Claridad al transmitir ideas técnicas a audiencias no técnicas.</p>
+                </div>
+                <div class="aptitud-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Orientación a Resultados</h4>
+                    <p>Cumplimiento de métricas y objetivos con calidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Recomendaciones -->
+    <section id="recomendaciones" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recomendaciones de LinkedIn</h2>
+                <div class="header-underline"></div>
+                <p class="section-subtitle">Lo que colegas y líderes dicen de mí</p>
+            </div>
+            <div class="testimonials-grid" id="testimonialsGrid">
+                <!-- Las recomendaciones se cargarán dinámicamente con JS -->
             </div>
         </div>
     </section>
@@ -273,57 +212,54 @@
             <div class="section-header">
                 <h2>Trabajemos Juntos</h2>
                 <div class="header-underline"></div>
+                <p class="section-subtitle">¿Tienes un proyecto en mente? Escríbeme</p>
             </div>
-
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Conecta conmigo</h3>
-                    <p>Siempre estoy interesado en oportunidades para desarrollar soluciones innovadoras. No dudes en contactarme.</p>
-                    
+                    <p>Si buscas un desarrollador comprometido, con habilidades full-stack y visión analítica, no dudes en escribirme.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <p class="label">Email</p>
-                                <a href="mailto:luis.holtman@protonmail.com">luis.holtman@protonmail.com</a>
+                                <a href="mailto:luis.holtman@protonmail.com" id="emailLink">luis.holtman@protonmail.com</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <p class="label">Ubicación</p>
-                                <p>Guatemala</p>
+                                <p>Mixco, Ciudad de Guatemala</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/luis-holtman-a21b171b8/" target="_blank" class="social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://github.com/SimplementeHoltman" target="_blank" class="social-link" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://devnode.online/" target="_blank" class="social-link" title="Sitio Web">
+                        <a href="https://jlholtman.me/" target="_blank" class="social-link" title="Sitio Web">
                             <i class="fas fa-globe"></i>
                         </a>
                     </div>
                 </div>
-
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="name" placeholder="Tu nombre" required>
-                        <label for="name">Nombre</label>
+                        <label for="name">Nombre completo</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Tu email" required>
-                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Tu correo" required>
+                        <label for="email">Correo electrónico</label>
                     </div>
                     <div class="form-group">
                         <textarea id="message" placeholder="Tu mensaje" rows="5" required></textarea>
                         <label for="message">Mensaje</label>
                     </div>
-                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    <button type="submit" class="btn-primary">Enviar mensaje</button>
                 </form>
             </div>
         </div>
@@ -332,8 +268,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Luis Holtman. Diseñado y desarrollado por mí mismo.</p>
-            <p class="footer-note">Última actualización: Abril 2026</p>
+            <p>&copy; 2026 Luis Holtman - Desarrollado con pasión</p>
         </div>
     </footer>
 
