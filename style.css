@@ -283,11 +283,7 @@ p {
 }
 
 .header-underline {
-    width: 70px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--azul-profundo), var(--azul-medio));
-    margin: 1rem auto 0;
-    border-radius: 2px;
+    display: none;
 }
 
 .about-content {
@@ -543,6 +539,89 @@ p {
 }
 
 /* ============================================
+   CERTIFICACIONES
+   ============================================ */
+.certifications-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gris-borde);
+}
+
+.certifications-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--azul-profundo);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.cert-card {
+    background: linear-gradient(135deg, var(--azul-claro) 0%, var(--blanco) 100%);
+    border: 1px solid var(--gris-borde);
+    border-left: 5px solid var(--azul-medio);
+    border-radius: 1.2rem;
+    padding: 1.4rem;
+    margin-bottom: 1.8rem;
+    box-shadow: var(--sombra-sm);
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-lg);
+    border-left-color: var(--azul-profundo);
+}
+
+.cert-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--azul-profundo), var(--azul-medio));
+    color: white;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    box-shadow: var(--sombra-sm);
+}
+
+.cert-content h4 {
+    margin-bottom: 0.3rem;
+    color: var(--azul-profundo);
+    font-size: 1.05rem;
+}
+
+.cert-provider {
+    color: var(--gris-suave);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--azul-profundo), var(--azul-medio));
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.cert-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-sm);
+    color: white;
+}
+
+/* ============================================
    APTITUDES
    ============================================ */
 .aptitudes {
@@ -610,58 +689,64 @@ p {
     border-left: 5px solid var(--azul-medio);
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.2rem;
+    border: 1px solid var(--gris-borde);
 }
 
 .testimonial-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--sombra-md);
+    border-left-color: var(--azul-profundo);
+    border-color: var(--azul-medio);
 }
 
 .testimonial-profile {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.2rem;
     cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.testimonial-profile:hover {
+    transform: translateX(4px);
 }
 
 .testimonial-avatar {
-    width: 64px;
-    height: 64px;
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--azul-medio);
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra-sm);
     flex-shrink: 0;
 }
 
 .testimonial-profile:hover .testimonial-avatar {
-    transform: scale(1.05);
-}
-
-.testimonial-info {
-    flex: 1;
+    transform: scale(1.08);
+    box-shadow: var(--sombra-md);
+    border-color: var(--azul-profundo);
 }
 
 .testimonial-name {
     font-weight: 700;
-    font-size: 1.1rem;
     color: var(--azul-profundo);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
 }
 
 .testimonial-role {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--gris-suave);
     line-height: 1.4;
 }
 
 .testimonial-text {
     font-style: italic;
-    line-height: 1.7;
-    margin: 0.5rem 0 0;
+    line-height: 1.6;
+    margin: 0.5rem 0;
     color: var(--gris-oscuro);
-    font-size: 0.95rem;
 }
 
 .testimonial-text-expandable {
@@ -676,13 +761,12 @@ p {
     font-size: 0.85rem;
     cursor: pointer;
     padding: 0;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
     display: inline-block;
 }
 
 .read-more-btn:hover {
     color: var(--azul-profundo);
-    text-decoration: underline;
 }
 
 /* ============================================
@@ -858,17 +942,14 @@ p {
         margin-left: 64px !important;
     }
     
-    .testimonial-avatar {
-        width: 72px;
-        height: 72px;
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
     
-    .testimonial-name {
-        font-size: 1rem;
-    }
-    
-    .testimonial-text {
-        font-size: 0.9rem;
+    .cert-badge {
+        align-self: center;
     }
 }
 
@@ -919,49 +1000,29 @@ p {
     .hero, .about, .projects, .experience, .aptitudes, .testimonials, .contact {
         padding: 60px 0;
     }
-
-        .testimonials-grid {
-        grid-template-columns: 1fr;
+    
+    .cert-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .cert-badge {
+        width: 56px;
+        height: 56px;
+        font-size: 1.4rem;
+    }
+    
+    .testimonials-grid {
         gap: 1.5rem;
     }
     
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-    
-    .testimonial-profile {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.75rem;
-    }
-    
     .testimonial-avatar {
-        width: 100px;
-        height: 100px;
+        width: 56px;
+        height: 56px;
     }
-    
-    .testimonial-info {
-        text-align: center;
-    }
-    
-    .testimonial-name {
-        font-size: 1.1rem;
-    }
-    
-    .testimonial-role {
-        font-size: 0.8rem;
-    }
-    
-    .testimonial-text {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-    
-    .read-more-btn {
-        display: block;
-        margin: 0.75rem auto 0;
-    }
-
 }
 
 @media (max-width: 480px) {
@@ -994,27 +1055,20 @@ p {
     .project-tech {
         justify-content: center;
     }
-
-        .testimonials {
-        padding: 60px 0;
+    
+    .cert-card {
+        padding: 1rem;
+        gap: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .cert-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
     }
     
     .testimonial-card {
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
-    
-    .testimonial-avatar {
-        width: 85px;
-        height: 85px;
-    }
-    
-    .testimonial-name {
-        font-size: 1rem;
-    }
-    
-    .testimonial-text {
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
-
 }
